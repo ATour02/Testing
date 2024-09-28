@@ -22,8 +22,8 @@ export class GameTest extends Scene {
     const tileset1 = addTileset(map, "Tiles", "tilesSet");
     const tileFondo = addTileset(map, "fondo", "background");
     console.log(map)
-    const fondoJuego = map.createLayer ("fondo", tileFondo);
-    const plataform = map.createLayer("plataforma", tileset1);
+    const fondoJuego = map.createLayer ("fondo", tileFondo,0 ,0);
+    const plataform = map.createLayer("plataforma", tileset1,0 ,0);
 
     plataform.setCollisionByProperty({ colision: true });
 

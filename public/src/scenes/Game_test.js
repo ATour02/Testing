@@ -17,7 +17,27 @@ export class GameTest extends Scene {
   }
 
   create() {
-     // Crear el tilemap
+    const map = this.make.tilemap({ key: "map" });
+
+    const tileFondo = map.addTilesetImage("fondo", "background");
+    const tileset1 = map.addTilesetImage("Tiles", "tilesSet");
+
+    const fondoJuego = map.createLayer("fondo", tileFondo, 0, 0);
+    const plataform = map.createLayer("plataforma", tileset1, 0, 0);
+    plataform.setCollisionByProperty({ colision: true });
+
+
+    this.player1 = this.physics.add.sprite(
+      200,
+      200,
+      "player1"
+    );
+    this.player2 = this.physics.add.sprite(
+      200,
+      200,
+      "player2"
+    );
+     /* // Crear el tilemap
     const map = this.make.tilemap({ key: "map" });
     const tileset1 = addTileset(map, "Tiles", "tilesSet");
     const tileFondo = addTileset(map, "fondo", "background");
@@ -40,7 +60,7 @@ export class GameTest extends Scene {
       202,
       200,
       "player2"
-    );
+    ); */
 
     // Configurar propiedades y colisiones para los jugadores
     this.player1.setBounce(0.1);

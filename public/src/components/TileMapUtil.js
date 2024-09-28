@@ -14,11 +14,6 @@ export function loadTilemap(scene, mapKey, tilesetKey, tilesetImage, layerName) 
  * @param {number} y - Posición Y inicial de la capa.
  * @returns {Phaser.Tilemaps.TilemapLayer} - La capa creada.
  */
-export function createTilemapLayer(tilemap, layerName, tileset, x = 0, y = 0) {
-    const layer = tilemap.createLayer(layerName, tileset, x, y);
-    return layer;
-  }
-  
   /**
    * Función para añadir un tileset al tilemap.
    * @param {Phaser.Tilemaps.Tilemap} tilemap - El tilemap al que se añadirá el tileset.

@@ -1,7 +1,6 @@
 import { Scene } from "phaser";
 import {
   addTileset,
-  createTilemapLayer,
   findObjectByName,
 } from "./../components/TileMapUtil";
 import { FallingPlatform, MovingObstacle } from "./../entities/Obstacles";
